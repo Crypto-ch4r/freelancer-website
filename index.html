@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/preload.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <title>Diseñador Freelancer</title>
 </head>
 <body>
     <header>
-    <h1>Juan Carlos Zendejas - Freelancer</h1>
+        <h1 class="titulo">Juan Carlos Zendejas <span>Freelancer</span></h1>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="#">Sobre mi</a>
-        <a href="#">Clientes</a>
-        <a href="#">Contacto</a>
-    </nav>
-    
-    <img src="/img/hero.jpg">
+    <div class="nav-bg">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="#">Sobre mi</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
 
     <section>
-        <h2>Diseño y Desarrollo Web Freelancer</h2>
+        <h2 class="titulo">Diseño y Desarrollo Web<span> Freelancer</span></h2>
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" 
         width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" 
         stroke-linecap="round" stroke-linejoin="round">

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem; /* 1rem = 10px*/
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.titulo span {
+    font-size: 2rem;
+    color: blueviolet;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg{
+    background-color: var(--secundario);  
+}
+
+.nav-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 480px) { /* Estandar telefonos */
+    .nav-principal{
+       flex-direction: row;
+       justify-content: space-between;
+    }
+}
+
+@media (min-width: 786px) { /* Estandar tablets */
+     .nav-principal{
+        flex-direction: row;
+        justify-content: space-between;
+     }
+}
+
+.nav-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.nav-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
