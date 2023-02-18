@@ -8,29 +8,76 @@
     --gris: #757575;
 }
 
+/* Globales */
+
 html {
     font-size: 62.5%;
+    box-sizing: border-box; /* Hack para box model */
+}
+
+*,*::before, *:after{
+    box-sizing: inherit; /*Aplica un box-sizng border box 
+    para evitar que los elementos se hagan más grandes por el padding*/
 }
 
 body {
     font-size: 1.6rem; /* 1rem = 10px*/
 }
 
-.titulo {
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
     text-align: center;
+}
+
+/* Tipografías */
+
+h1 {
     font-size: 3.8rem;
     font-family: 'Oswald', sans-serif;
 }
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+/* Titulos */
 
 .titulo span {
     font-size: 2rem;
     color: blueviolet;
 }
 
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
+
+@media (min-width: 480px) {
+     .boton{
+        width: auto;
+     }
+
 }
+
+/* Navegación principal */
 
 .nav-bg{
     background-color: var(--secundario);  
@@ -39,19 +86,22 @@ body {
 .nav-principal {
     display: flex;
     flex-direction: column;
+
+     align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 480px) { /* Estandar telefonos */
     .nav-principal{
        flex-direction: row;
-       justify-content: space-between;
+       justify-content: space-around;
     }
 }
 
 @media (min-width: 786px) { /* Estandar tablets */
      .nav-principal{
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
      }
 }
 
@@ -70,3 +120,37 @@ body {
     color: var(--oscuro);
 }
 
+/* Hero */
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6); /*Forma antigua. Se deja ya que algunos navegadores aun no soportan la nueva forma*/
+    background-color: rgb(0 0 0 / 60%); /*Forma nueva*/
+    width: 100%;
+    height: 100%;
+
+    /*Alinear vertical y horizontalmetne*/
+    display: flex; /*Coloca izq - der */
+    flex-direction: column; /*Arriba - Abajo*/
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    font-family: 'Oswald', sans-serif;
+    color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
